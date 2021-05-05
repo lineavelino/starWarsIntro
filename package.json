@@ -1,0 +1,47 @@
+{
+  "name": "starwarsintro",
+  "version": "1.0.0",
+  "description": "Desenvolvimento da Intro do Star Wars seguindo o tutorial de Glaucia Lemos on May the 4th 2021.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon",
+    "lint": "eslint --ext .js -f ./node_modules/eslint-friendly-formatter . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lineavelino/StarWarsIntro.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "express"
+  ],
+  "author": "Aline Avelino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lineavelino/StarWarsIntro/issues"
+  },
+  "homepage": "https://github.com/lineavelino/StarWarsIntro#readme",
+  "dependencies": {
+    "eslint-friendly-formatter": "^4.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^6.0.0"
+  },
+  "husky": {
+    "pre-commit": "lint-staged",
+    "pre-push": "npm run lint"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
