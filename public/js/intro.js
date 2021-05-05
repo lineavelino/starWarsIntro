@@ -49,7 +49,7 @@ function nevar() {
     for (let i = 0; i < num; i++) {
         const e = elements[i];
         ctx.beginPath();
-        ctx.fillStyle = "FFFFFF";
+        ctx.fillStyle = "yellow";
         ctx.arc(e.x, e.y, e.size, 0, 2 * Math.PI);
         ctx.fill();
     }
