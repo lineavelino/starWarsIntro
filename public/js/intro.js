@@ -18,10 +18,23 @@ window.addEventListener('resize', () => {
     paragrafos.style.height = height + 'px';
 });
 
-function iniciar() {
-    intro.className = 'intro intro_texto intro_animacao';
-    historia.className = 'historia historia_texto historia_animacao';
-    som.play();
+function playPause() {
+    if (document.getElementById("button").value == "Iniciar") {
+        document.getElementById("button").value = "Pausar";
+        document.getElementById("button").textContent = "Pausar";
+        intro.className = 'intro intro_texto intro_animacao';
+        historia.className = 'historia historia_texto historia_animacao';
+        intro.style.animationPlayState = 'running';
+        historia.style.animationPlayState = 'running';
+        som.play();
+    }
+    else {
+        document.getElementById("button").value = "Iniciar";
+        document.getElementById("button").textContent = "Iniciar";
+        intro.style.animationPlayState = 'paused';
+        historia.style.animationPlayState = 'paused';
+        som.pause()
+    }
 }
 
 let canvas = document.getElementById('snow');

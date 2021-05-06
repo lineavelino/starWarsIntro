@@ -2,10 +2,13 @@
 <html lang="pt-br">
 
 <head>
-    <title>App intro Star Wars</title>
+    <title>Intro Star Wars</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -18,7 +21,8 @@
 </head>
 
 <body>
-    <div class="botao" onclick="iniciar()">Iniciar</div>
+    <button id="button" value="Iniciar" onclick="playPause()">Iniciar</button>
+
     <canvas id="snow"></canvas>
     <section class="intro intro_texto">
         A Long Time Ago, in a galaxy far,<br> far away...
@@ -36,7 +40,7 @@
                 E assim ela inicia a sua busca por toda a galáxia.
             </p>
             <p class="text-center">
-                Durante a sua busca,
+                Durante sua trajetória,
                 Aline se depara com um planeta chamado Internet.
                 E é justamente ali que ela iniciará todo o seu treinamento
                 para atingir os seus objetivos.
